@@ -25,7 +25,7 @@ public class Main {
           BufferedReader in = new BufferedReader(
                   new InputStreamReader(clientSocket.getInputStream())
           );
-          System.out.println(in.lines());
+          System.out.println(in);
         } catch (IOException e) {
           System.out.println("IOException: " + e.getMessage());
         } finally {
