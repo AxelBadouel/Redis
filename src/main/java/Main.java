@@ -18,9 +18,9 @@ public class Main {
           serverSocket.setReuseAddress(true);
           // Wait for connection from client.
           clientSocket = serverSocket.accept();
-          OutputStream outputStream = null;
+          OutputStream outputStream = clientSocket.getOutputStream();
 
-          while ((outputStream = clientSocket.getOutputStream()) != null) {
+          for(int i = 0; i < 2; i++) {
               outputStream.write("+PONG\r\n".getBytes());
           }
 
